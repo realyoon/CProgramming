@@ -35,7 +35,6 @@ int main(int argc, char* argv[]) {
             bolen = 0;
             if (!(isdigit(numbers[n_i])))
             {
-                printf("%d\n",n_i);
                 printf("Player2 input Type Error : Retry\n");
                 bolen = 1;
                 n_t = 1;
@@ -160,12 +159,12 @@ int main(int argc, char* argv[]) {
         strLen = recv(hSocket, message, sizeof(message) - 1, 0);
         if (strLen <= 0)
             ErrorHandling("read() error!");
-        printf("Message from server: %s\n", message);
+        printf("Message from player1: %s\n", message);
         num = atoi(message);
 
         // 볼과 스트라이크 개수 측정 함수
         CountAnswer(number_C,num,p_str, p_bal);
-        printf("%d %d\n",*p_str,*p_bal);
+       
 
         // 게임 끝 판정
         if (*p_str == 4) 

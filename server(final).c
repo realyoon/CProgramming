@@ -40,7 +40,6 @@ int main(int argc, char* argv[]) {
             bolen = 0;
             if (!(isdigit(numbers[n_i])))
             {
-                printf("%d\n",n_i);
                 printf("Player1 input Type Error : Retry\n");
                 bolen = 1;
                 n_t = 1;
@@ -118,7 +117,7 @@ int main(int argc, char* argv[]) {
         strLen = recv(hClntSock, message, sizeof(message) - 1, 0);
         if (strLen == -1)
             ErrorHandling("read() error!");
-        printf("Message from client: %s\n", message);
+        printf("Message from player2: %s\n", message);
         
     
         num = atoi(message);
